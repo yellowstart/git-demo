@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        git 操作练习
-    </div>
-</body>
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            Document
+        </title>
+    </head>
+    <body>
+        <div id="topics">
+            <div class="post">
+                <h1 class="postTitle">
+                    <a class="postTitle2" href="http://www.cnblogs.com/eedc/p/6168430.html" id="cb_post_title_url">
+                        如何用命令将本地项目上传到git
+                    </a>
+                </h1>
+                <div class="clear">
+                </div>
+                <div class="postBody">
+                    <div id="cnblogs_post_body">
+                        <p>
+                            1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
+                        </p>
+                        <div class="cnblogs_code">
+                            <pre>git init</pre>
+                        </div>
+                        <p>
+                            2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件
+                        </p>
+                        <div class="cnblogs_code">
+                            <pre>git add .</pre>
+                        </div>
+                        <p>
+                            3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明
+                        </p>
+                        <div class="cnblogs_code">
+                            <pre>git commit -m <span style="color: #800000">'</span><span style="color: #800000">first commit</span><span style="color: #800000">'</span></pre>
+                        </div>
+                        <p>
+                            4、关联到远程库
+                        </p>
+                        <div class="cnblogs_code">
+                            <pre>git remote add origin 你的远程库地址</pre>
+                        </div>
+                        <p>
+                            如：
+                        </p>
+                        <div class="cnblogs_code">
+                            <pre>git remote add origin https:<span style="color: #008000">//</span><span style="color: #008000">github.com/cade8800/ionic-demo.git</span></pre>
+                        </div>
+                        <p>
+                            5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）
+                        </p>
+                        <div class="cnblogs_code">
+                            <pre>git pull --rebase origin master</pre>
+                        </div>
+                        <p>
+                            6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。
+                        </p>
+                        <div class="cnblogs_code">
+                            <pre>git push -u origin master</pre>
+                        </div>
+                        <p>
+                            *、状态查询命令
+                        </p>
+                        <div class="cnblogs_code">
+                            <pre>git status</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
 </html>
